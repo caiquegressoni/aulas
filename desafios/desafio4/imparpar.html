@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<input type="text" id="numeros" placeholder="Digite os numeros" />
+<input type="button" value="Executar" onclick="classificar()" /><br /><br />
+<label id="saida"></label>
+
+<body>
+    <script>
+        const num = document.getElementById("numeros");
+        const saida = document.getElementById("saida");
+        var impar = 0;
+        var par = 0;
+
+        function classificar() {
+            let vetor = num.value.split(" ");
+            for (i = 0; i < vetor.length; i++) {
+                if (vetor[i] % 2 != 1) {
+                    par++;
+                } else {
+                    impar++;
+                }
+            }
+
+            let result = "";
+            if (par > 0) {
+                if (par > 1) result += `${par} pares<br/>`;
+                else result += `${par} par<br/>`;
+            }
+            if (impar > 0) {
+                if (impar > 1) result += `${impar} impares<br/>`;
+                else result += `${impar} impar<br/>`;
+            }
+            saida.innerHTML = result;
+            impar = 0;
+            par = 0;
+        }
+    </script>
+</body>
+
+</html>

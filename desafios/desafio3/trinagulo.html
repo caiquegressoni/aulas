@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classifição de Triangulos</title>
+</head>
+
+<body>
+    <script>
+        function triangulo(lado1, lado2, lado3) {
+
+            var a = lado1;
+            var b = lado2;
+            var c = lado3;
+
+            if (a < (b + c) && b < (a + c) && c < (a + b)) {
+
+                if (a == b && b == c) {
+                    return " O triangulo é Equilátero.";
+                } else if (a == b || a == c || b == c) {
+                    return " O triangulo é Isósceles.";
+                } else {
+                    return " O triangulo é Escaleno.";
+                }
+
+            } else {
+                return " O triangulo não pode ser criado";
+            }
+        }
+    </script>
+</body>
+
+</html>
