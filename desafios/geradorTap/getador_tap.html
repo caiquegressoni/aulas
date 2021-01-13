@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gerador de TAP</title>
+</head>
+
+<body>
+    <div class="align">
+        <form>
+            <label>Desrição do Projeto : </label>
+            <input type="text"><br>
+            <label>Recursos Humanos : </label>
+            <input type="text"><br>
+            <label>Patrocinadores : </label>
+            <input type="text" class="acertar"><br>
+            <label>Gerente do Projeto : </label>
+            <input type="text"><br>
+            <label>Data de conclusão : </label>
+            <input type="date"><br>
+            <button id="gera" onclick="geraPDF()"> Gerar EAP </button>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"
+        integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous">
+    </script>
+    <script src="geraTAP.js"></script>
+</body>
+
+</html>
